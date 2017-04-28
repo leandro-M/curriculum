@@ -1,0 +1,1 @@
+var homeIndex={toggle:function(t){$('[data-id="'+t+'"]').slideDown()},ready:function(){$(".box").click(function(t){if($(this).attr("data-target")){var a=$(this).attr("data-target");homeIndex.toggle(a)}})}};$(document).ready(homeIndex.ready);

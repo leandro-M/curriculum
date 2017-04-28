@@ -1,0 +1,99 @@
+.main {
+    display: flex;
+
+    .title {
+        font-family: $poppinsB;
+        text-transform: uppercase;
+
+        color: $primary;
+
+        letter-spacing: 0.04rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .description {
+        > .item {
+            .paragraph {
+                &:first-child {
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    > .left {
+        flex-basis: 75%;
+        min-height: calc(100vh - 4rem);
+
+        padding: 25px;
+        
+        background-color: $secondary;
+
+        border-left: 1px solid #333;
+
+        > .resume {
+            > .description {
+                margin-bottom: 0.8rem;
+            }
+        }
+
+        > .atributte {
+            > .description {
+                display: none;
+                > .item {
+                    margin-bottom: 1rem;                
+                }
+            }
+        }
+    }
+
+    > .right {
+        flex-basis: 25%;
+
+        background-color: $tertiary;
+        padding: 25px 20px;
+
+        > .image {
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            overflow: hidden;
+
+            margin: 0 auto 25px auto;
+
+            > .source {
+                width: 100%;;
+            }
+        }
+
+        > .about-me {
+            width: 100%;
+            background: #515056;
+            padding: 10px;
+            margin-bottom: 15px;
+
+            > .list {
+                > .item {
+                    display: flex;
+                    justify-content: flex-start;
+                    
+                    margin-bottom: 0.6rem;
+
+                    .icon {
+                        min-width: 15px;
+                        min-height: 15px;
+
+                        margin-right: 5px;
+                        font-size: 11px;
+                    }
+
+                    .text {
+                        color: #ccc;
+                        font-size: 0.65rem;
+                        font-family: $poppinsL;
+                    }
+                }
+            }
+        }     
+    }
+}
