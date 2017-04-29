@@ -1,17 +1,19 @@
 var homeIndex = {
 
-    toggle: function(target) {
-        //$('.atributte .description').toggleSlide();
-        $('[data-id="'+target+'"]').slideDown();
+    openMenu: function() {
+       $('.right').toggleClass('off');
+
+       $('.overlay').toggleClass('off');
+    },
+
+    closeMenu: function() {
+       homeIndex.openMenu();
     },
 
     ready: function() {
-        $('.box').click(function(e) {
-            if($(this).attr('data-target')) {
-                var target = $(this).attr('data-target');
-                homeIndex.toggle(target);
-            }
-        });
+        $(".open-menu").click(homeIndex.openMenu);
+
+        $('.overlay').click(homeIndex.closeMenu);
     }
 }
 

@@ -31,6 +31,11 @@
 
         border-left: 1px solid #333;
 
+        @media #{$celular} {
+            flex-basis: 100%;
+            width: 100%;
+        }
+
         > .resume {
             > .description {
                 margin-bottom: 0.8rem;
@@ -45,12 +50,80 @@
             }
         }
     }
+    > .overlay {
+        @media #{$celular} {
+            width: 30vw;
+            height: 100vh;
+            transition: 0.3s;
 
+            background: rgba(0,0,0,0.3);
+            
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            &.off {
+                transition: 0.3s;
+                left: -30vw;
+            }
+        }
+        
+    }
     > .right {
         flex-basis: 25%;
 
         background-color: $tertiary;
         padding: 25px 20px;
+
+        .open-menu {
+            display: none;
+
+            @media #{$celular} {
+                border: none;
+                background: none;
+
+                position: absolute;
+                top: 5rem;
+                left: -2rem;
+
+                z-index: 1;
+
+                color: #fff;
+                font-size: 1.2rem;
+
+                cursor: pointer;
+            }
+        }
+
+        @media #{$celular} {
+            padding: 5px 20px;        
+            flex-basis: auto;
+            width: 70vw;
+
+            min-height: 100vh;
+            position: fixed;
+            top: 0;
+            right: 0;
+            transition: 0.3s;
+            
+
+            &.off {
+                right: -70vw;
+                transition: 0.3s;
+
+                .open-menu {
+                    display: block;
+                }
+            }
+            
+            .habilities {
+                font-size: 0.6rem;
+            }
+
+            .paragraph {
+                font-size: 0.7rem;
+            }
+        }
 
         > .image {
             width: 100px;
@@ -59,6 +132,12 @@
             overflow: hidden;
 
             margin: 0 auto 25px auto;
+
+            @media #{$celular} {
+                width: 70px;
+                height: 70px;
+            }
+            
 
             > .source {
                 width: 100%;;
