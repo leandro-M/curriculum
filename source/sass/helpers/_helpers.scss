@@ -40,18 +40,10 @@
     align-items: center;
 
     margin-bottom: 0.8rem;
-    cursor: pointer;
-
-    &:hover {
-        > .icon {
-            color: #fff;
-            transition: 0.3s;
-        }
-    }
 
     > .icon {
-        min-width: 25px;
-        min-height: 25px;
+        min-width: 30px;
+        min-height: 30px;
 
         margin-right: 0.5rem;
         transition: 0.3s;

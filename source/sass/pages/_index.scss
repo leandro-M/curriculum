@@ -39,7 +39,6 @@
 
         > .atributte {
             > .description {
-                display: none;
                 > .item {
                     margin-bottom: 1rem;                
                 }
@@ -91,6 +90,10 @@
                         color: #ccc;
                         font-size: 0.65rem;
                         font-family: $poppinsL;
+
+                        a {
+                            color: #ccc;
+                        }
                     }
                 }
             }
